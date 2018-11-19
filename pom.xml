@@ -200,22 +200,25 @@
 		
 		<!-- zlst公司的jar -->
 		<dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>druid</artifactId>
-        <version>1.1.10</version>
-        </dependency>
-        
-        <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>fastjson</artifactId>
-        <version>1.2.39</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.zlst</groupId>
-            <artifactId>zlst-database-core</artifactId>
-            <version>2.2.7</version>
-        </dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.39</version>
+		</dependency>
 		
 		<dependency>
             <groupId>org.apache.commons</groupId>
@@ -229,11 +232,6 @@
             <version>12.1.0.2</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.zlst</groupId>
-            <artifactId>zlst-base-exception</artifactId>
-            <version>1.0.3</version>
-        </dependency>
 
         <dependency>
             <groupId>com.zlst</groupId>
@@ -241,18 +239,6 @@
             <version>1.0.7</version>
         </dependency>
 		
-        <!--日志-->
-        <dependency>
-            <groupId>com.zlst</groupId>
-            <artifactId>log.dependencies</artifactId>
-            <version>1.0.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.zlst</groupId>
-            <artifactId>zlst-base-redis</artifactId>
-            <version>2.2</version>
-        </dependency>
 
 	</dependencies>
 
