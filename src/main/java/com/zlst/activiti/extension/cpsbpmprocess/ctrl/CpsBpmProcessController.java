@@ -13,7 +13,7 @@ import com.zlst.param.ObjectToResult;
  */
 @RestController
 @RequestMapping("/cpsBpmProcess")
-public class CpsBpmProcessController   {
+public class CpsBpmProcessController {
 
 	@Autowired
 	CpsBpmProcessService cpsBpmProcessService;
