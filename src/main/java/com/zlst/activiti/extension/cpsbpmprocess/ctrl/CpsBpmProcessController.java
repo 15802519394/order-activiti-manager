@@ -1,7 +1,6 @@
 package com.zlst.activiti.extension.cpsbpmprocess.ctrl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,17 +12,14 @@ import com.zlst.param.ObjectToResult;
  * @author 170285
  */
 @RestController
-@EnableAutoConfiguration
 @RequestMapping("/cpsBpmProcess")
-public class CpsBpmProcessController  {
+public class CpsBpmProcessController   {
 
 	@Autowired
 	CpsBpmProcessService cpsBpmProcessService;
 	
 	// PFS事件与工作流模板的保存
 	public Object savePfsModel() {
-		
-		
 		return ObjectToResult.getResult("hh");
 	}
 	
