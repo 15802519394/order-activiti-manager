@@ -11,14 +11,18 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 //import org.springframework.boot.context.emery.EnableDiscoveryClient;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 //@EnableDiscoveryClient
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @Import({ApplicationConfiguration.class})
+@EnableJpaRepositories(basePackages = "com.zlst")
+@EntityScan(basePackages = "com.zlst")
 public class OrderActivitiManagerApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {

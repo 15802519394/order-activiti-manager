@@ -2,12 +2,13 @@ package com.zlst.activiti.extension.cpsbpmprocess.bean;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
 /**
  * PFS事件与工作流模板的关联对象表
  * @author 170285
- *
  */
 @SuppressWarnings("unused")
 @Entity
@@ -23,6 +24,7 @@ public class CpsBpmProcess {
 	@Column(name="PROCESS_NAME",length=32)
 	private String  processName; // 模板名称
 	
+	@Id
 	@Column(name="PFS_EVENT_ID",length=32)
 	private String  pfsEventId; // PFS事件id
 	
@@ -48,7 +50,6 @@ public class CpsBpmProcess {
 	private String  enableState; //启动状态（A：启动，X未启动）
 
 	public CpsBpmProcess() {
-		super();
 	}
 
 	public String getBpmProcessNo() {
