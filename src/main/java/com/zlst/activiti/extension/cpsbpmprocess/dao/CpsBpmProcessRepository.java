@@ -10,6 +10,6 @@ import com.zlst.activiti.extension.cpsbpmprocess.bean.CpsBpmProcess;
 @Repository
 public interface CpsBpmProcessRepository extends JpaRepository<CpsBpmProcess, String>  {
 	
-	List<CpsBpmProcess> findByBfsEventId(String pfsEventId);
+	List<CpsBpmProcess> findByPfsEventId(String pfsEventId);
 	
 }

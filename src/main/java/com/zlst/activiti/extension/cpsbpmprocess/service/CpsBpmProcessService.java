@@ -12,10 +12,10 @@ import com.zlst.activiti.extension.cpsbpmprocess.dao.CpsBpmProcessRepository;
 public class CpsBpmProcessService  {
 
 	@Autowired
-	private CpsBpmProcessRepository cpsBpmProcessRepository;
+	protected CpsBpmProcessRepository cpsBpmProcessRepository ;
 	
-	public List<CpsBpmProcess> findByBfsEventId(String pfsEventId){
-		return cpsBpmProcessRepository.findByBfsEventId(pfsEventId);
+	public List<CpsBpmProcess> findByPfsEventId(String pfsEventId){
+		return cpsBpmProcessRepository.findByPfsEventId(pfsEventId);
 	}
 	
 }

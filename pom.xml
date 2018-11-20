@@ -95,6 +95,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<exclusions>
+			    <exclusion>
+			     <groupId>org.springframework.data</groupId>
+			     <artifactId>spring-data-jpa</artifactId>
+			    </exclusion>
+		   </exclusions>
 		</dependency>
 
 		<dependency>
@@ -239,7 +245,6 @@
             <version>1.0.7</version>
         </dependency>
 		
-
 	</dependencies>
 
 	<build>
