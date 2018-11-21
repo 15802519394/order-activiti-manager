@@ -1,8 +1,11 @@
 package com.zlst.activiti.extension.cpsbpmprocess.bean;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 
@@ -13,8 +16,10 @@ import javax.persistence.Table;
 @SuppressWarnings("unused")
 @Entity
 @Table(name = "CPS_BPM_PROCESS")
+@IdClass(CpsBpmProcessKey.class) // 联合主键
 public class CpsBpmProcess {
-
+	
+	@Id
 	@Column(name="BPM_PROCESS_NO",length=32)
 	private String bpmProcessNo; // BPM模板编码
 	
@@ -29,22 +34,22 @@ public class CpsBpmProcess {
 	private String  pfsEventId; // PFS事件id
 	
 	@Column(name="TPLT_NO",length=32)
-	private String  tpltNo; //定单模板
+	private String  tpltNo; // 定单模板编号
 	
 	@Column(name="NOTES",length=32)
 	private String  notes; // 备注
 	
-	@Column(name="CR_DATE",length=32)
-	private String  crDate; //创建时间 
+	@Column(name="CREATE_DATE",length=32)
+	private Date createDate; //创建时间 
 	
-	@Column(name="MODI_DATE",length=32)
-	private String  modiDate; // 更新时间
+	@Column(name="MODIFY_DATE",length=32)
+	private Date modifyDate; // 更新时间
 	
-	@Column(name="cr_staff_no",length=32)
-	private String  crStaffNo; // 创建人
+	@Column(name="CREATED_BY",length=32)
+	private String  createdBy; // 创建人
 	
-	@Column(name="MODI_STAFF_NO",length=32)
-	private String  modiStaffNo; // 修改人
+	@Column(name="MODIFIED_BY",length=32)
+	private String  modifiedBy; // 修改人
 	
 	@Column(name="ENABLE_STATE",length=32)
 	private String  enableState; //启动状态（A：启动，X未启动）
@@ -100,44 +105,44 @@ public class CpsBpmProcess {
 		this.notes = notes;
 	}
 
-	public String getCrDate() {
-		return crDate;
-	}
-
-	public void setCrDate(String crDate) {
-		this.crDate = crDate;
-	}
-
-	public String getModiDate() {
-		return modiDate;
-	}
-
-	public void setModiDate(String modiDate) {
-		this.modiDate = modiDate;
-	}
-
-	public String getCrStaffNo() {
-		return crStaffNo;
-	}
-
-	public void setCrStaffNo(String crStaffNo) {
-		this.crStaffNo = crStaffNo;
-	}
-
-	public String getModiStaffNo() {
-		return modiStaffNo;
-	}
-
-	public void setModiStaffNo(String modiStaffNo) {
-		this.modiStaffNo = modiStaffNo;
-	}
-
 	public String getEnableState() {
 		return enableState;
 	}
 
 	public void setEnableState(String enableState) {
 		this.enableState = enableState;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getModifyDate() {
+		return modifyDate;
+	}
+
+	public void setModifyDate(Date modifyDate) {
+		this.modifyDate = modifyDate;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
 	}
 	
 	
