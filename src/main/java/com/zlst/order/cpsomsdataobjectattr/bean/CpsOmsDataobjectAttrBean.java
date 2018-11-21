@@ -9,11 +9,11 @@ import javax.persistence.Column;
  *
  *         VARCHAR2(16)                    not null,
                VARCHAR2(32)                    not null,
- ATTR_NAME            VARCHAR2(40)                    not null,
- EXT_CODE             VARCHAR2(32),
- ALIAS                VARCHAR2(256),
- LENGTH               VARCHAR2(16),
- DATA_TYPE            VARCHAR2(8),
+             VARCHAR2(40)                    not null,
+              VARCHAR2(32),
+                 VARCHAR2(256),
+                VARCHAR2(16),
+             VARCHAR2(8),
  MIN_VALUE            number(12),
  MAX_VALUE            number(12),
  DEFAULT_VALUE        VARCHAR2(256),
@@ -28,5 +28,21 @@ public class CpsOmsDataobjectAttrBean {
     @Column(name = "DATAOBJECT_NO")
     private String dataobjectNo;
 
-    //@Column(name = "ATTR_NO")
+    @Column(name = "ATTR_NO")
+    private String attrNo;
+
+    @Column(name = "ATTR_NAME")
+    private String attrName;
+
+    @Column(name = "EXT_CODE")
+    private String extCode;
+
+    @Column(name = "ALIAS")
+    private String alias;
+
+    @Column(name = "LENGTH")
+    private String length;
+
+    @Column(name = "DATA_TYPE")
+    private String dataType;
 }
