@@ -35,5 +35,26 @@ public final class GlobalConstants {
     // 服务配置（服务名）
     public static final String QUERY_RELATION_TABLE = "queryRelationTable";     // 查询对象关联表
 
+    /**
+     * 目录类型
+     *   DO 数据对象
+     *   ACTIVITY  环节目录
+     */
+    public static final String CPS_OMS_CATALOG_TYPE_DO = "DO";
+    public static final String CPS_OMS_CATALOG_TYPE_ACTIVITY = "ACTIVITY";
+
+    /**
+     * A 有效
+     * X 删除
+     */
+    public static final String STATE_A = "A";
+    public static final String STATE_X = "X";
+
+    /**
+     * CO 客户订单
+     * SO 服务定单
+     */
+    public static final String ORD_TYPE_CO = "CO";
+    public static final String ORD_TYPE_SO = "SO";
 
 }
